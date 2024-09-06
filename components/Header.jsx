@@ -7,7 +7,7 @@ const Header = () => {
     <header className="py-8 lg:py-12 text-white ">
       <div className="container max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/">
-          <h1 className=" text-4xl font-semibold">
+          <h1 className="text-2xl sm:text-4xl font-semibold">
             Muhammad<span className="text-blue-700">Rizki</span>
           </h1>
         </Link>

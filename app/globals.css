@@ -20,6 +20,8 @@ body {
   font-family: var(--font-jetbrains-mono), monospace;
   color: white;
   line-height: 1.75;
+  padding-left: 1rem; /* Tailwind px-2 */
+  padding-right: 1rem; /* Tailwind px-2 */
 }
 
 @layer utilities {
