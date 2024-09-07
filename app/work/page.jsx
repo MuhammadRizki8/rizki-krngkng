@@ -12,6 +12,7 @@ import 'swiper/css';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import WorkSlideBtn from '@/components/WorkSlideBtn';
 
 const projects = [
   {
@@ -95,26 +96,23 @@ const Work = () => {
           </motion.div>
 
           {/* Right section - Swiper for images */}
-          <div className="w-full xl:w-[50%] flex flex-col items-end relative">
-            <Swiper slidesPerView={1} onSlideChange={handleNext}>
+          <div className="w-full xl:w-[50%] ">
+            <Swiper spaceBetween={30} slidesPerView={1} onSlideChange={handleNext}>
               {projects.map((project, index) => (
-                <SwiperSlide key={index}>
-                  <motion.div key={project.image} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="relative w-full h-[300px] xl:h-[460px]">
-                    <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" className="rounded-lg shadow-lg" />
-                  </motion.div>
+                <SwiperSlide key={index} className="w-full">
+                  <div className="h-[300px] md:h-[460px] relative group flex justify-center items-center bg-slate-500">
+                    {/* overlay */}
+                    <div className="absolute top-0 w-full h-full bg-black/10 z-10"></div>
+                    {/* image */}
+                    <div className="relative w-full h-full">
+                      <Image src={project.image} fill className="object-cover" alt={project.title} />
+                    </div>
+                  </div>
                 </SwiperSlide>
               ))}
+              {/* slider button */}
+              <WorkSlideBtn />
             </Swiper>
-
-            {/* Navigation buttons for large screens */}
-            <div className="hidden md:flex justify-center gap-4 mt-4">
-              <motion.button onClick={handlePrev} whileHover={{ scale: 1.1 }} className="bg-blue-700 p-4 rounded-sm hover:bg-blue-800 transition duration-300">
-                <BsChevronLeft className="text-white" />
-              </motion.button>
-              <motion.button onClick={handleNext} whileHover={{ scale: 1.1 }} className="bg-blue-700 p-4 rounded-sm hover:bg-blue-800 transition duration-300">
-                <BsChevronRight className="text-white" />
-              </motion.button>
-            </div>
           </div>
         </div>
       </div>
