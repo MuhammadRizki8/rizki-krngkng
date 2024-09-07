@@ -34,4 +34,10 @@ body {
   :root {
     --radius: 0.5rem;
   }
+  .text-outline {
+    -webkit-text-stroke: 1px white;
+  }
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #1273e6;
+  }
 }

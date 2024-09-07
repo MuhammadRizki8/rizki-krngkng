@@ -5,13 +5,13 @@ import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
 const Home = () => {
   return (
-    <section className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 space-y-8 xl:space-y-0">
+    <section className="h-full max-w-6xl mx-auto">
+      <div className="pb-4 container mx-auto h-full">
+        <div className=" flex flex-col xl:flex-row items-center justify-between space-y-4 xl:space-y-0">
           {/* Text */}
           <div className="text-center xl:text-left space-y-4 xl:space-y-6 order-2 xl:order-none">
-            <span className="block text-lg text-gray-500">Computer Science Student</span>
-            <h1 className="text-4xl sm:text-5xl xl:text-7xl font-semibold leading-tight">
+            <span className="block text-base sm:text-lg text-gray-500">Computer Science Student</span>
+            <h1 className="text-3xl sm:text-5xl xl:text-7xl font-semibold leading-tight">
               Hello, I&apos;m <br />
               <span className="text-blue-700">Muhammad Rizki</span>
             </h1>
@@ -26,7 +26,7 @@ const Home = () => {
           </div>
 
           {/* Photo */}
-          <div className="order-1 xl:order-none mb-8 py-8 xl:mb-0">
+          <div className=" order-1 xl:order-none pb-4 xl:pb-0">
             <Photo />
           </div>
         </div>
