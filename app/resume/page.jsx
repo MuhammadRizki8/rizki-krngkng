@@ -1,10 +1,10 @@
 'use client';
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, FaGit } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiDocker, SiMongodb } from 'react-icons/si';
-
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, FaGit, FaPhp, FaLaravel, FaGithub } from 'react-icons/fa';
+import { SiTailwindcss, SiNextdotjs, SiDocker, SiMongodb, SiFlask, SiGooglecloud, SiFastapi } from 'react-icons/si';
+import { DiMysql } from 'react-icons/di'; // MySQL icon
 const about = {
   title: 'About me',
-  description: 'I am a passionate web developer with a focus on creating responsive, user-friendly applications using the latest web technologies.',
+  description: 'Certified Google Associate Cloud Engineer with a background in cloud computing, data science, and software development. Passionate about creating efficient, scalable applications using modern technologies.',
   info: [
     {
       fieldName: 'Name',
@@ -16,7 +16,7 @@ const about = {
     },
     {
       fieldName: 'Experience',
-      fieldValue: '2 Years',
+      fieldValue: '2+ Years',
     },
     {
       fieldName: 'Nationality',
@@ -41,32 +41,27 @@ const about = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My Experience',
-  description: 'I have experience working in both front-end and back-end development, specializing in building dynamic, responsive web applications.',
+  description: 'I have experience in cloud computing, web development, mobile development, and teaching, specializing in creating efficient and scalable solutions.',
   items: [
     {
-      company: 'icikiwir.inc',
-      posisiton: 'Group Burden',
-      duration: '2022 - present',
+      company: 'PT Telkom Indonesia',
+      position: 'DevOps Intern',
+      duration: 'Sep 2024 - Present',
     },
     {
-      company: 'icikiwir.inc',
-      posisiton: 'Group Burden',
-      duration: '2022 - present',
+      company: 'Universitas Pendidikan Indonesia',
+      position: 'Teaching Assistant',
+      duration: 'Sep 2023 - Jun 2024',
     },
     {
-      company: 'icikiwir.inc',
-      posisiton: 'Group Burden',
-      duration: '2022 - present',
+      company: 'PT Sineas Kreatif Indonesia',
+      position: 'Back End Developer',
+      duration: 'Mar 2024 - May 2024',
     },
     {
-      company: 'icikiwir.inc',
-      posisiton: 'Group Burden',
-      duration: '2022 - present',
-    },
-    {
-      company: 'icikiwir.inc',
-      posisiton: 'Group Burden',
-      duration: '2022 - present',
+      company: 'PT Sinergi Inovasi Tekno',
+      position: 'Mobile Developer',
+      duration: 'Jan 2024 - Mar 2024',
     },
   ],
 };
@@ -75,32 +70,31 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My Education',
-  description: 'I have a strong academic background in computer science and web development.',
+  description: 'With a strong academic foundation in computer science, I have complemented my formal education with specialized courses in cloud computing and web development.',
   items: [
     {
-      institution: 'icikiwir University',
-      degree: 'Bachelor of Computer Science',
-      duration: '2022 - present',
+      institution: 'Universitas Pendidikan Indonesia',
+      degree: 'S1 - Computer Science',
+      duration: 'Sep 2021 - Present',
+      score: 'GPA: 3.89/4.00',
     },
     {
-      institution: 'Online Courses',
-      degree: 'Web Development Certification',
-      duration: '2021 - 2022',
+      institution: 'Digital Talent',
+      degree: 'Junior Web Developer',
+      duration: 'Jul 2024 - Aug 2024',
+      score: 'Score: 95/100',
     },
     {
-      institution: 'Online Courses',
-      degree: 'Web Development Certification',
-      duration: '2021 - 2022',
+      institution: 'Bangkit Academy',
+      degree: 'Cloud Computing',
+      duration: 'Aug 2023 - Jan 2024',
+      score: 'Score: 92/100',
     },
     {
-      institution: 'Online Courses',
-      degree: 'Web Development Certification',
-      duration: '2021 - 2022',
-    },
-    {
-      institution: 'Online Courses',
-      degree: 'Web Development Certification',
-      duration: '2021 - 2022',
+      institution: 'Rakamin Academy X IDX Partners',
+      degree: 'Data Scientist',
+      duration: 'Oct 2023 - Nov 2023',
+      score: 'Score: 81/100',
     },
   ],
 };
@@ -108,7 +102,7 @@ const education = {
 // skills
 const skills = {
   title: 'My Skills',
-  description: 'I have experience working with a variety of web development technologies and tools.',
+  description: 'I have experience working with a wide array of technologies in software development, cloud computing, and data science.',
   skillList: [
     { icon: <FaHtml5 />, name: 'HTML' },
     { icon: <FaCss3 />, name: 'CSS' },
@@ -117,11 +111,18 @@ const skills = {
     { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
     { icon: <SiNextdotjs />, name: 'Next.js' },
     { icon: <FaNodeJs />, name: 'Node.js' },
+    { icon: <FaPhp />, name: 'PHP' }, // Added PHP
+    { icon: <FaLaravel />, name: 'Laravel' }, // Added Laravel
+    { icon: <DiMysql />, name: 'SQL' }, // Added SQL
+    { icon: <SiGooglecloud />, name: 'GCP' }, // Added Google Cloud Platform
+    { icon: <FaGit />, name: 'Git' },
+    { icon: <FaGithub />, name: 'GitHub' }, // Added GitHub
     { icon: <FaFigma />, name: 'Figma' },
     { icon: <FaPython />, name: 'Python' },
-    { icon: <FaGit />, name: 'Git' },
+    { icon: <SiFastapi />, name: 'FastAPI' },
+    { icon: <SiFlask />, name: 'Flask' },
     { icon: <SiDocker />, name: 'Docker' },
-    { icon: <SiMongodb />, name: 'MongoDB' },
+    // { icon: <SiMongodb />, name: 'MongoDB' },
   ],
 };
 
@@ -132,7 +133,7 @@ import { motion } from 'framer-motion';
 const Resume = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }} className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
-      <dev className="container max-w-6xl mx-auto">
+      <div className="container max-w-6xl mx-auto">
         <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-14">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
@@ -143,7 +144,7 @@ const Resume = () => {
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
-            {/*  experience*/}
+            {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-8 text-center xl:text-left">
                 <h3 className="text-4xl font-bold text-white">{experience.title}</h3>
@@ -152,9 +153,9 @@ const Resume = () => {
                 <ScrollArea className="h-[400px] overflow-y-auto">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {experience.items.map((item, index) => (
-                      <li key={index} className="bg-slate-800/55 h-36 py-6 px-8 rounded-xl shadow-lg flex flex-col justify-center items-center lg:items-start gap-3">
+                      <li key={index} className="bg-slate-800/55 h-40 py-6 px-8 rounded-xl shadow-lg flex flex-col justify-center items-center lg:items-start gap-3">
                         <span className="text-blue-400 font-medium">{item.duration}</span>
-                        <h3 className="text-xl text-center lg:text-left font-semibold text-white">{item.posisiton}</h3>
+                        <h3 className="text-xl text-center lg:text-left font-semibold text-white">{item.position}</h3>
                         <p className="font-bold text-slate-400">{item.company}</p>
                       </li>
                     ))}
@@ -163,7 +164,7 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/*  education*/}
+            {/* education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-8 text-center xl:text-left">
                 <h3 className="text-4xl font-bold text-white">{education.title}</h3>
@@ -172,10 +173,11 @@ const Resume = () => {
                 <ScrollArea className="h-[400px] overflow-y-auto">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {education.items.map((item, index) => (
-                      <li key={index} className="bg-slate-800/55 h-36 py-6 px-8 rounded-xl shadow-lg flex flex-col justify-center items-center lg:items-start gap-3">
+                      <li key={index} className="bg-slate-800/55 h-52 py-6 px-8 rounded-xl shadow-lg flex flex-col justify-center items-center lg:items-start gap-3">
                         <span className="text-blue-400 font-medium">{item.duration}</span>
                         <h3 className="text-xl text-center lg:text-left font-semibold text-white">{item.degree}</h3>
                         <p className="font-bold text-slate-400">{item.institution}</p>
+                        <span className="text-slate-300">{item.score}</span> {/* Add score/GPA */}
                       </li>
                     ))}
                   </ul>
@@ -183,7 +185,7 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/*  skills*/}
+            {/* skills */}
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-8 text-center xl:text-left">
                 <h3 className="text-4xl font-bold text-white">{skills.title}</h3>
@@ -202,7 +204,7 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/*  about me*/}
+            {/* about me */}
             <TabsContent value="about" className="w-full">
               <div className="flex flex-col gap-8 text-center xl:text-left">
                 <h3 className="text-4xl font-bold text-white">{about.title}</h3>
@@ -222,7 +224,7 @@ const Resume = () => {
             </TabsContent>
           </div>
         </Tabs>
-      </dev>
+      </div>
     </motion.div>
   );
 };

@@ -6,26 +6,26 @@ import { motion } from 'framer-motion';
 const services = [
   {
     num: '01',
-    title: 'web development',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat placeat reiciendis maiores ratione, ut qui nostrum.',
+    title: 'Web Development',
+    description: 'Experienced in developing responsive and dynamic web applications using modern frameworks like React, Node.js, TailwindCSS, and Laravel.',
     href: '',
   },
   {
     num: '02',
-    title: 'mobile development',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat placeat reiciendis maiores ratione, ut qui nostrum.',
+    title: 'Mobile Development',
+    description: 'Proficient in building cross-platform mobile apps with Flutter, enhancing performance and user experience using tools like GetX for state management.',
     href: '',
   },
   {
     num: '03',
-    title: 'data analytic',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat placeat reiciendis maiores ratione, ut qui nostrum.',
+    title: 'Cloud Computing',
+    description: 'Certified Google Associate Cloud Engineer, skilled in designing, implementing, and optimizing cloud systems on platforms like Google Cloud and Alibaba Cloud.',
     href: '',
   },
   {
     num: '04',
-    title: 'aselole',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero fugiat placeat reiciendis maiores ratione, ut qui nostrum.',
+    title: 'Data Analytics & Machine Learning',
+    description: 'Experienced in data analytics and machine learning using Python, Scikit-learn, Tensorflow, and FastAPI, applying data-driven insights for problem-solving.',
     href: '',
   },
 ];
