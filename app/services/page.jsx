@@ -24,7 +24,7 @@ const services = [
   },
   {
     num: '04',
-    title: 'Data Analytics & Machine Learning',
+    title: 'Data Analytics',
     description: 'Experienced in data analytics and machine learning using Python, Scikit-learn, Tensorflow, and FastAPI, applying data-driven insights for problem-solving.',
     href: '',
   },
