@@ -3,75 +3,20 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { BsArrowUpRight, BsGithub, BsWordpress, BsCreditCard, BsAndroid } from 'react-icons/bs';
-import { SiFlutter, SiFastapi, SiFigma, SiGooglecloud, SiTensorflow, SiFlask, SiLaravel } from 'react-icons/si';
+import { SiFlutter, SiFastapi, SiFigma, SiGooglecloud, SiTensorflow, SiFlask, SiLaravel, SiReact, SiTailwindcss } from 'react-icons/si';
 
 import Link from 'next/link';
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import WorkSlideBtn from '@/components/WorkSlideBtn';
-
-const projects = [
-  {
-    num: '01',
-    category: 'Mobile App Project',
-    title: 'LanderUp - P2P Lending App',
-    description: 'A peer-to-peer (P2P) lending mobile application that connects borrowers and lenders to conduct transactions. This application focuses on funding MSMEs to advance the middle to lower economy.',
-    stack: ['Flutter', 'FastAPI', 'Figma'],
-    role: ['UI/UX Researcher', 'Mobile Developer', 'Backend Developer'],
-    image: '/assets/work/landerup.png',
-    live: '#',
-    github: 'https://github.com/MuhammadRizki8/LenderUp',
-  },
-  {
-    num: '02',
-    category: 'Mobile App Project',
-    title: 'Minatku',
-    description: 'MinatKu is a career and college-prep application created to fulfill the capstone project in the Bangkit programme. The application can provide suitable career path suggestions for users using AI.',
-    stack: ['Android', 'Tensorflow', 'Flask', 'Google Cloud Platform'],
-    role: ['Backend Developer', 'Cloud Engineer'],
-    image: '/assets/work/minatku.png',
-    live: '#',
-    github: 'https://github.com/minatku',
-  },
-  {
-    num: '03',
-    category: 'Web App Project',
-    title: 'School Profile SMA 13 Bandung',
-    description: 'A school profile website for SMA 13 Bandung that displays information about school programs, achievements, and activities. Built using Laravel with an admin panel to manage content dynamically.',
-    stack: ['Laravel'],
-    role: ['Web Developer'],
-    image: '/assets/work/school.png',
-    live: '#',
-    github: 'https://github.com/MuhammadRizki8/laravel-school-profile',
-  },
-  {
-    num: '04',
-    category: 'Web App Project',
-    title: 'Donasi Mahasiswa UPI',
-    description: '"Peduli Mahasiswa" is a student donation website application that facilitates online donations. Built using WordPress, integrated with the TriPay payment gateway to manage secure transactions.',
-    stack: ['WordPress', 'TriPay'],
-    role: ['Web Developer'],
-    image: '/assets/work/donasi.png',
-    live: '#',
-    github: 'https://github.com/MuhammadRizki8/Website-Donasi-Peduli-Mahasiswa',
-  },
-];
+import { Navigation } from 'swiper/modules'; // Import Navigation module
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { projects } from './data';
 
 const Work = () => {
   const [projectIndex, setProjectIndex] = useState(0);
-
-  const handleNext = () => {
-    setProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const handlePrev = () => {
-    setProjectIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
-  };
 
   const renderStackIcon = (stack) => {
     let icon;
@@ -106,6 +51,12 @@ const Work = () => {
       case 'Laravel':
         icon = <SiLaravel className="text-red-600" size={24} />;
         break;
+      case 'React':
+        icon = <SiReact className="text-blue-400" size={24} />;
+        break;
+      case 'TailwindCSS':
+        icon = <SiTailwindcss className="text-blue-600" size={24} />;
+        break;
       default:
         icon = null;
     }
@@ -128,6 +79,7 @@ const Work = () => {
             <p className="text-slate-400 mb-6">{projects[projectIndex].description}</p>
             {/* Tech stack */}
             <div className="flex gap-4 text-lg font-medium text-blue-700">
+              <span className="text-base text-white">Stack: </span>
               {projects[projectIndex].stack.map((tech, index) => (
                 <TooltipProvider key={index}>
                   <Tooltip>
@@ -144,11 +96,14 @@ const Work = () => {
 
             {/* Role */}
             <div className="mt-4 flex flex-wrap gap-2">
-              {projects[projectIndex].role.map((role, index) => (
-                <motion.span key={index} className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.2 }}>
-                  {role}
-                </motion.span>
-              ))}
+              <span>Role: </span>
+              <div className="flex flex-wrap gap-2">
+                {projects[projectIndex].role.map((role, index) => (
+                  <motion.span key={index} className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.2 }}>
+                    {role}
+                  </motion.span>
+                ))}
+              </div>
             </div>
             {/* Icons */}
             <div className="border-t pt-4 flex items-center mt-8 gap-4">
@@ -178,11 +133,19 @@ const Work = () => {
           </motion.div>
 
           {/* Right section - Swiper for images */}
-          <div className="w-full xl:w-[50%]">
-            <Swiper spaceBetween={30} slidesPerView={1} onSlideChange={handleNext}>
+          <div className="w-full xl:w-[50%] relative">
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation // Enable navigation buttons (Next, Prev)
+              grabCursor={true} // Enable cursor drag functionality
+              modules={[Navigation]} // Add Navigation module to Swiper
+              onSlideChange={(swiper) => setProjectIndex(swiper.activeIndex)}
+              className="relative"
+            >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[300px] md:h-[460px] relative group flex justify-center items-center bg-slate-500">
+                  <div className="h-[250px] md:h-[460px] lg:h-[400px] relative group flex justify-center items-center bg-slate-500">
                     {/* overlay */}
                     <div className="absolute top-0 w-full h-full bg-black/10 z-10"></div>
                     {/* image */}
@@ -190,12 +153,10 @@ const Work = () => {
                       <Image src={project.image} fill className="object-cover" alt={project.title} />
                     </div>
                     {/* Project title on slide */}
-                    <div className="absolute bottom-5 left-5 text-white text-2xl bg-slate-900 px-2 shadow-lg rounded-lg bg-opacity-30 font-bold z-20">{project.title}</div>
+                    {/* <div className="absolute bottom-5 left-5 text-white text-2xl bg-slate-900 px-2 shadow-lg rounded-lg bg-opacity-30 font-bold z-20">{project.title}</div> */}
                   </div>
                 </SwiperSlide>
               ))}
-              {/* slider button */}
-              <WorkSlideBtn />
             </Swiper>
           </div>
         </div>
