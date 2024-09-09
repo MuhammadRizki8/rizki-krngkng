@@ -37,19 +37,19 @@ const Contact = () => {
               <div className="flex items-center space-x-4">
                 <a href="https://www.linkedin.com/in/rizki-muhammad-32b4b4203/" target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-500 hover:text-blue-600 transition duration-300">
                   <BsLinkedin className="text-4xl" />
-                  <span className="ml-2 text-white hover:text-blue-600">LinkedIn</span>
+                  <span className="hidden  md:block ml-2 text-white hover:text-blue-600">LinkedIn</span>
                 </a>
               </div>
               <div className="flex items-center space-x-4">
                 <a href="https://github.com/MuhammadRizki8" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-500 hover:text-gray-400 transition duration-300">
                   <BsGithub className="text-4xl" />
-                  <span className="ml-2 text-white hover:text-gray-500">GitHub</span>
+                  <span className="hidden  md:block ml-2 text-white hover:text-gray-500">GitHub</span>
                 </a>
               </div>
               <div className="flex items-center space-x-4">
                 <a href="https://www.instagram.com/krng_kng/" target="_blank" rel="noopener noreferrer" className="flex items-center text-pink-500 hover:text-pink-600 transition duration-300">
                   <BsInstagram className="text-4xl" />
-                  <span className="ml-2 text-white hover:text-pink-600">Instagram</span>
+                  <span className="hidden  md:block ml-2 text-white hover:text-pink-600">Instagram</span>
                 </a>
               </div>
             </div>
