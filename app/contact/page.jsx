@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { BsEnvelope, BsTelephone, BsMap, BsLinkedin, BsInstagram } from 'react-icons/bs';
+import { BsEnvelope, BsTelephone, BsMap, BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs';
 
 const Contact = () => {
   return (
@@ -33,13 +33,25 @@ const Contact = () => {
           {/* Social Media Links */}
           <motion.div className="bg-slate-800 p-6 rounded-lg shadow-lg w-full md:w-1/2 text-center" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6, duration: 0.8 }}>
             <h2 className="text-2xl font-bold text-white mb-6">Connect with Me</h2>
-            <div className="flex justify-center space-x-6">
-              <a href="https://www.linkedin.com/in/rizki-muhammad-32b4b4203/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 transition duration-300">
-                <BsLinkedin className="text-4xl" />
-              </a>
-              <a href="https://www.instagram.com/your_instagram/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 transition duration-300">
-                <BsInstagram className="text-4xl" />
-              </a>
+            <div className="flex flex-row justify-center items-center space-x-4">
+              <div className="flex items-center space-x-4">
+                <a href="https://www.linkedin.com/in/rizki-muhammad-32b4b4203/" target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-500 hover:text-blue-600 transition duration-300">
+                  <BsLinkedin className="text-4xl" />
+                  <span className="ml-2 text-white hover:text-blue-600">LinkedIn</span>
+                </a>
+              </div>
+              <div className="flex items-center space-x-4">
+                <a href="https://github.com/MuhammadRizki8" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-500 hover:text-gray-400 transition duration-300">
+                  <BsGithub className="text-4xl" />
+                  <span className="ml-2 text-white hover:text-gray-500">GitHub</span>
+                </a>
+              </div>
+              <div className="flex items-center space-x-4">
+                <a href="https://www.instagram.com/krng_kng/" target="_blank" rel="noopener noreferrer" className="flex items-center text-pink-500 hover:text-pink-600 transition duration-300">
+                  <BsInstagram className="text-4xl" />
+                  <span className="ml-2 text-white hover:text-pink-600">Instagram</span>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>

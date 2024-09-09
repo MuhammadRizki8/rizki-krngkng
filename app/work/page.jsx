@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { BsArrowUpRight, BsGithub, BsWordpress, BsCreditCard, BsAndroid } from 'react-icons/bs';
-import { SiFlutter, SiFastapi, SiFigma, SiGooglecloud, SiTensorflow, SiFlask, SiLaravel, SiReact, SiTailwindcss } from 'react-icons/si';
+import { SiFlutter, SiFastapi, SiFigma, SiGooglecloud, SiTensorflow, SiFlask, SiLaravel, SiReact, SiTailwindcss, SiBootstrap } from 'react-icons/si';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,54 +14,10 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules'; // Import Navigation module
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { projects } from './data';
+import StackIcon from './StackIcon';
 
 const Work = () => {
   const [projectIndex, setProjectIndex] = useState(0);
-
-  const renderStackIcon = (stack) => {
-    let icon;
-    switch (stack) {
-      case 'Flutter':
-        icon = <SiFlutter className="text-blue-500" size={24} />;
-        break;
-      case 'FastAPI':
-        icon = <SiFastapi className="text-green-500" size={24} />;
-        break;
-      case 'Figma':
-        icon = <SiFigma className="text-pink-500" size={24} />;
-        break;
-      case 'WordPress':
-        icon = <BsWordpress className="text-blue-600" size={24} />;
-        break;
-      case 'TriPay':
-        icon = <BsCreditCard className="text-yellow-500" size={24} />;
-        break;
-      case 'Android':
-        icon = <BsAndroid className="text-green-500" size={24} />;
-        break;
-      case 'Tensorflow':
-        icon = <SiTensorflow className="text-yellow-500" size={24} />;
-        break;
-      case 'Flask':
-        icon = <SiFlask className="text-gray-200" size={24} />;
-        break;
-      case 'Google Cloud Platform':
-        icon = <SiGooglecloud className="text-blue-700" size={24} />;
-        break;
-      case 'Laravel':
-        icon = <SiLaravel className="text-red-600" size={24} />;
-        break;
-      case 'React':
-        icon = <SiReact className="text-blue-400" size={24} />;
-        break;
-      case 'TailwindCSS':
-        icon = <SiTailwindcss className="text-blue-600" size={24} />;
-        break;
-      default:
-        icon = null;
-    }
-    return icon;
-  };
 
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }} className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
@@ -85,7 +41,7 @@ const Work = () => {
                   <Tooltip>
                     <TooltipTrigger>
                       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.2 }}>
-                        {renderStackIcon(tech)}
+                        <StackIcon stack={tech} />
                       </motion.div>
                     </TooltipTrigger>
                     <TooltipContent>{tech}</TooltipContent>
@@ -93,7 +49,6 @@ const Work = () => {
                 </TooltipProvider>
               ))}
             </div>
-
             {/* Role */}
             <div className="mt-4 flex flex-wrap gap-2">
               <span>Role: </span>
@@ -108,9 +63,10 @@ const Work = () => {
             {/* Icons */}
             <div className="border-t pt-4 flex items-center mt-8 gap-4">
               <TooltipProvider>
+                {/* Live Preview Link */}
                 <Tooltip>
                   <TooltipTrigger>
-                    <Link href={projects[projectIndex].live}>
+                    <Link href={projects[projectIndex].live} target="_blank">
                       <motion.div whileHover={{ scale: 1.1 }} className="bg-slate-800 hover:bg-blue-700 rounded-full p-4 text-xl text-blue-700 hover:text-slate-300 transition duration-300">
                         <BsArrowUpRight />
                       </motion.div>
@@ -118,16 +74,20 @@ const Work = () => {
                   </TooltipTrigger>
                   <TooltipContent>Live Preview</TooltipContent>
                 </Tooltip>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <Link href={projects[projectIndex].github} target="_blank">
-                      <motion.div whileHover={{ scale: 1.1 }} className="bg-slate-800 hover:bg-blue-700 rounded-full p-4 text-xl text-blue-700 hover:text-slate-300 transition duration-300">
-                        <BsGithub />
-                      </motion.div>
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent>GitHub Repository</TooltipContent>
-                </Tooltip>
+
+                {/* GitHub Repository - only if available */}
+                {projects[projectIndex].github && (
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <Link href={projects[projectIndex].github} target="_blank">
+                        <motion.div whileHover={{ scale: 1.1 }} className="bg-slate-800 hover:bg-blue-700 rounded-full p-4 text-xl text-blue-700 hover:text-slate-300 transition duration-300">
+                          <BsGithub />
+                        </motion.div>
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>GitHub Repository</TooltipContent>
+                  </Tooltip>
+                )}
               </TooltipProvider>
             </div>
           </motion.div>
@@ -152,8 +112,6 @@ const Work = () => {
                     <div className="relative w-full h-full">
                       <Image src={project.image} fill className="object-cover" alt={project.title} />
                     </div>
-                    {/* Project title on slide */}
-                    {/* <div className="absolute bottom-5 left-5 text-white text-2xl bg-slate-900 px-2 shadow-lg rounded-lg bg-opacity-30 font-bold z-20">{project.title}</div> */}
                   </div>
                 </SwiperSlide>
               ))}

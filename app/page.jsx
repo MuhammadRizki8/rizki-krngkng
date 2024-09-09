@@ -18,7 +18,7 @@ const Home = () => {
           {/* Text */}
           <div className="text-center xl:text-left space-y-4 xl:space-y-6 order-2 xl:order-none">
             <span className="block text-base sm:text-lg text-blue-600">
-              <span className="text-white">A </span>
+              {/* <span className="text-white">A </span> */}
               {/* Typewriter Effect */}
               <Typewriter words={description} loop={true} cursor cursorStyle="_" typeSpeed={70} deleteSpeed={50} delaySpeed={1000} />
             </span>
