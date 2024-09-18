@@ -9,7 +9,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Home = () => {
   // Data description di sini
   // Data description di sini
-  const description = ['Web Developer Enthusiast', 'AI Enthusiast', 'Associate Cloud Engineer', 'Software Developer'];
+  const description = ['Computer Science Student', 'Associate Cloud Engineer', 'Junior Web Developer', 'AI Enthusiast'];
 
   return (
     <section className="h-full max-w-6xl mx-auto">
