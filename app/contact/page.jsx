@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { BsEnvelope, BsTelephone, BsMap, BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs';
+import { FaMedium } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -50,6 +51,12 @@ const Contact = () => {
                 <a href="https://www.instagram.com/krng_kng/" target="_blank" rel="noopener noreferrer" className="flex items-center text-pink-500 hover:text-pink-600 transition duration-300">
                   <BsInstagram className="text-4xl" />
                   <span className="hidden  md:block ml-2 text-white hover:text-pink-600">Instagram</span>
+                </a>
+              </div>
+              <div className="flex items-center space-x-4">
+                <a href="https://medium.com/@mrizki135790" target="_blank" rel="noopener noreferrer" className="flex items-center text-green-500 hover:text-green-600 transition duration-300">
+                  <FaMedium className="text-4xl" />
+                  <span className="hidden  md:block ml-2 text-white hover:text-green-600">Medium</span>
                 </a>
               </div>
             </div>
