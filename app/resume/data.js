@@ -52,6 +52,11 @@ export const certification = {
       issuedBy: 'BNSP',
       dateObtain: 'September 2024',
     },
+    {
+      name: 'Database Administrator',
+      issuedBy: 'BNSP',
+      dateObtain: 'December 2024',
+    },
   ],
 };
 // experience data
