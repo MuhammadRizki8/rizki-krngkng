@@ -44,7 +44,7 @@ export const certification = {
     {
       name: 'Associate Cloud Engineer',
       issuedBy: 'Google Cloud',
-      dateObtain: 'March 2023',
+      dateObtain: 'March 2024',
       link: 'https://www.credly.com/badges/464e830b-18f3-41a3-a91a-e5434359f654/linked_in_profile',
     },
     {
