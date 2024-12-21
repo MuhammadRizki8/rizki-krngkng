@@ -38,7 +38,7 @@ const Photo = () => {
           animate={{ opacity: 1, y: 0, transition: { delay: 1, duration: 0.6, ease: 'easeInOut' } }}
           className="relative w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]  rounded-full shadow-[0_0_60px_rgba(43,108,176,0.5)]"
         >
-          <Image src="/assets/photo.png" priority quality={100} fill alt="rizki" className="object-contain rounded-full" />
+          {/* <Image src="/assets/profile-pic.png" priority quality={100} fill alt="rizki" className="object-contain rounded-full" /> */}
         </motion.div>
 
         {/* Animated Circle */}
