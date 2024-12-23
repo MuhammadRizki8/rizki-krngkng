@@ -106,7 +106,7 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold text-white">{about.title}</h3>
                 <p className="max-w-[600px] text-slate-300 mx-auto xl:mx-0">{about.description}</p>
 
-                <ScrollArea className="h-[400px] overflow-y-auto">
+                <ScrollArea className="h-[360px] overflow-y-auto">
                   <div className="flex flex-col gap-4 text-slate-300 mx-auto xl:mx-0">
                     {about.info.map((info, index) => (
                       <div key={index} className="flex justify-start space-x-2 items-center text-lg">
