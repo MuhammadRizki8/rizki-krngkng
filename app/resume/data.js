@@ -68,7 +68,7 @@ export const experience = {
     {
       company: 'PT Telkom Indonesia',
       position: 'DevOps Engineer Intern',
-      duration: 'Sep 2024 - Present',
+      duration: 'Sep 2024 - Des 2024',
     },
     {
       company: 'Universitas Pendidikan Indonesia',

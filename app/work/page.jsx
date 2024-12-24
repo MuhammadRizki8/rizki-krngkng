@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation, EffectFlip } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -89,9 +89,10 @@ const Work = () => {
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
+              effect="flip"
               autoplay={{
                 delay: 3000,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
               }}
               grabCursor={true}
               centeredSlides={true}
