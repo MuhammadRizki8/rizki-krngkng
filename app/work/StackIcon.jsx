@@ -1,5 +1,5 @@
 import { BsWordpress, BsCreditCard, BsAndroid } from 'react-icons/bs';
-import { SiFlutter, SiFastapi, SiFigma, SiGooglecloud, SiTensorflow, SiFlask, SiLaravel, SiReact, SiTailwindcss, SiBootstrap } from 'react-icons/si';
+import { SiFlutter, SiFastapi, SiFigma, SiGooglecloud, SiTensorflow, SiFlask, SiLaravel, SiReact, SiTailwindcss, SiBootstrap, SiGooglegemini, SiLangchain, SiScikitlearn } from 'react-icons/si';
 
 const StackIcon = ({ stack }) => {
   let icon;
@@ -9,6 +9,15 @@ const StackIcon = ({ stack }) => {
       break;
     case 'FastAPI':
       icon = <SiFastapi className="text-green-500" size={24} />;
+      break;
+    case 'Gemini AI':
+      icon = <SiGooglegemini className="text-blue-300" size={24} />;
+      break;
+    case 'Scikit-learn':
+      icon = <SiScikitlearn className="text-orange-400" size={24} />;
+      break;
+    case 'Langchain':
+      icon = <SiLangchain className="text-slate-500" size={24} />;
       break;
     case 'Figma':
       icon = <SiFigma className="text-pink-500" size={24} />;
