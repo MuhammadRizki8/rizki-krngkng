@@ -26,7 +26,7 @@ const Home = () => {
               Hello, I&apos;m <br />
               <span className="text-blue-700">Muhammad Rizki</span>
             </h1>
-            <p className="mb-6 max-w-md xl:max-w-xl text-white/80 mx-auto xl:mx-0">I am a final-year Computer Science student at Universitas Pendidikan Indonesia with interests in software development, data science, and cloud computing.</p>
+            <p className="mb-6 max-w-md xl:max-w-xl text-white/80 mx-auto xl:mx-0">I am a final-year Computer Science student at Universitas Pendidikan Indonesia with interests in software development, artificial intelligence, and cloud computing.</p>
             {/* buttons and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-4 sm:gap-6">
               <Button variant="outline" size="lg" className="uppercase ">
