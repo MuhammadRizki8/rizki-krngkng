@@ -1,5 +1,5 @@
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, FaGit, FaPhp, FaLaravel, FaGithub } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiDocker, SiMongodb, SiFlask, SiGooglecloud, SiFastapi } from 'react-icons/si';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, FaGit, FaPhp, FaLaravel, FaGithub, FaWordpress } from 'react-icons/fa';
+import { SiTailwindcss, SiNextdotjs, SiDocker, SiMongodb, SiFlask, SiGooglecloud, SiFastapi, SiGoland, SiJenkins } from 'react-icons/si';
 import { DiMysql } from 'react-icons/di'; // MySQL icon
 export const about = {
   title: 'About me',
@@ -149,6 +149,8 @@ export const skills = {
     { icon: <SiFastapi />, name: 'FastAPI' },
     { icon: <SiFlask />, name: 'Flask' },
     { icon: <SiDocker />, name: 'Docker' },
-    // { icon: <SiMongodb />, name: 'MongoDB' },
+    { icon: <SiGoland />, name: 'Golang' }, 
+    { icon: <SiJenkins />, name: 'Jenkins' }, 
+    { icon: <FaWordpress />, name: 'WordPress' },
   ],
 };
