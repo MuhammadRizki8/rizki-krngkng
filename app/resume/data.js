@@ -67,6 +67,11 @@ export const experience = {
   items: [
     {
       company: 'PT Telkom Indonesia',
+      position: 'Fullstack Dev Intern',
+      duration: 'Feb 20245 - Jul 2025',
+    },
+    {
+      company: 'PT Telkom Indonesia',
       position: 'DevOps Engineer Intern',
       duration: 'Sep 2024 - Des 2024',
     },
